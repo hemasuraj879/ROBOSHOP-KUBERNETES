@@ -28,6 +28,9 @@ spec:
       containers:
       - name: catalogue
         image: surajk879/catalogue
+        envFrom:
+        - configMapRef:
+            name: catalogue
 
 ---
 
