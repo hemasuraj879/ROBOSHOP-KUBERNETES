@@ -39,7 +39,7 @@ spec:
           name: nginx
           items:
           - key: nginx.conf
-            path: nginx-conf
+            path: nginx.conf
 
         
 
