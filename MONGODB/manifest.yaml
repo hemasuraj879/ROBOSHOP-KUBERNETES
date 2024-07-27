@@ -32,6 +32,26 @@ spec:
 
 # defining service to establish communication in between pods
 
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+  namespace: roboshop
+
+spec:
+  selector: # labels should be match with pod
+    tier: db
+    project: roboshop
+    env: dev
+
+  ports:
+    - name: mongodb-port
+      protocol: TCP
+      port: 27017 # port belongs to service
+      targetPort: 27017 # port belongs to container
+
 
 
 
