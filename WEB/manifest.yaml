@@ -145,6 +145,7 @@ spec:
       containers:
       - name: catalogue
         image: surajk879/web:1.3
+        volumeMounts: # corrected the indentation here
         - name: nginx-conf # name of the volume you created above
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
