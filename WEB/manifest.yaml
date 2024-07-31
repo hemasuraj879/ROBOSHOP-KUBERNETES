@@ -153,6 +153,7 @@ metadata:
   namespace: roboshop
 
 spec:
+  type: LoadBalancer
   selector:
     tier: ui
     project: roboshop
