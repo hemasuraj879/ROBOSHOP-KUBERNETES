@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis
@@ -47,4 +47,3 @@ spec:
     port: 6379
     targetPort: 6379
 
-    
