@@ -42,7 +42,6 @@ metadata:
 
 spec:
   selector:
-    matchLabels:
       tier: db
       project: roboshop
       env: dev

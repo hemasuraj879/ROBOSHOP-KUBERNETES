@@ -39,7 +39,6 @@ metadata:
 
 spec:
   selector:
-    matchLabels:
       tier: db
       project: roboshop
       env: dev
@@ -48,3 +47,5 @@ spec:
       protocol: TCP
       port: 27017
       targetPort: 27017
+
+
