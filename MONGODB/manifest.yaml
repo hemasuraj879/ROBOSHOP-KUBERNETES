@@ -1,10 +1,11 @@
+# DEPLOYEMNT FILE
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
   name: mongodb
-  namespace: roboshop # declaring namespace
-  labels:   # these labels belongs to deployment
+  namespace: roboshop
+  labels:
     tier: db
     project: roboshop
     env: dev
@@ -12,25 +13,21 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels: # these labels should match with pod
+    matchLabels:
       tier: db
-      project: roboshop
       env: dev
 
   template:
-    metadata: # this is pod definition
+    metadata:
       labels:
         tier: db
-        project: roboshop
         env: dev
-
     spec:
       containers:
       - name: mongodb
-        image: surajk879/mongodb:1.3
+        image: surajk879/mongodb:1.5 
 
-
-# defining service to establish communication in between pods
+# Service file
 
 ---
 
@@ -41,20 +38,13 @@ metadata:
   namespace: roboshop
 
 spec:
-  selector: # labels should be match with pod
-    tier: db
-    project: roboshop
-    env: dev
-
-  ports:
+  selector:
+    matchLabels:
+      tier: db
+      project: roboshop
+      env: dev
+    ports:
     - name: mongodb-port
       protocol: TCP
-      port: 27017 # port belongs to service
-      targetPort: 27017 # port belongs to container
-
-
-
-
-
-
-
+      port: 27017
+      targetPort: 27017
