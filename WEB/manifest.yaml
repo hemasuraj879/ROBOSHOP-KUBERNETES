@@ -132,8 +132,8 @@ spec:
         configMap:
           name: nginx
           items:
-          - key: nginx-conf
-            path: nginx-conf
+          - key: nginx.conf
+            path: nginx.conf
 
       containers:
       - name: web
@@ -141,7 +141,7 @@ spec:
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
-          subPath: nginx-conf
+          subPath: nginx.conf
           readOnly: true
 
 ---
