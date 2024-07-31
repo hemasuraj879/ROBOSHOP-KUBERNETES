@@ -41,7 +41,7 @@ metadata:
   namespace: roboshop
 
 spec:
-  selectors:  
+  selector:  
     tier: app
     project: roboshop
     env: dev
