@@ -28,7 +28,7 @@ spec:
         image: surajk879/catalogue:1.5 
         envFrom:
         - configMapRef:
-            name: catalogue-config
+            name: catalogue
 
 # Service file
 
@@ -58,7 +58,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: catalogue-config
+  name: catalogue
   namespace: roboshop
 
 data:
