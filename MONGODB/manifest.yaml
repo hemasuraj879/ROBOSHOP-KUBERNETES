@@ -42,10 +42,10 @@ spec:
       tier: db
       project: roboshop
       env: dev
-    ports:
-    - name: mongodb-port
-      protocol: TCP
-      port: 27017
-      targetPort: 27017
+  ports:
+  - name: mongodb-port
+    protocol: TCP
+    port: 27017
+    targetPort: 27017
 
 
